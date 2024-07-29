@@ -1,0 +1,7 @@
+### 申请验证码
+POST {{checkcode_host}}/checkcode/pic
+
+### 校验验证码
+POST {{checkcode_host}}/checkcode/verify?key=checkcode:929397e9c6094c5b86086682b858c0f5&code=D8VK
+### 申请验证码-虚拟机
+POST 192.168.101.65:63075/checkcode/pic

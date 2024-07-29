@@ -1,0 +1,96 @@
+###
+POST http://localhost:63040/content/course/list?pageNo=1&pageSize=10
+Content-Type: application/json
+
+{
+  "auditStatus": "",
+  "courseName": "java",
+  "publishStatus": ""
+}
+
+<> 2024-07-12T135459.200.json
+<> 2024-07-12T135420.404.html
+<> 2024-07-12T135403.404.html
+<> 2024-07-12T134631.404.html
+<> 2024-07-12T134526.404.html
+<> 2024-07-12T134417.404.html
+<> 2024-07-12T134254.404.html
+
+### 创建课程
+POST http://localhost:63040/content/course
+Content-Type: application/json
+
+{
+  "charge": "201000",
+  "price": 0,
+  "originalPrice":0,
+  "qq": "22333",
+  "wechat": "223344",
+  "phone": "13333333",
+  "validDays": 365,
+  "mt": "1-1",
+  "st": "1-1-1",
+  "name": "",
+  "pic": "",
+  "teachmode": "200002",
+  "users": "初级人员",
+  "tags": "",
+  "grade": "204001",
+  "description": ""
+}
+
+### 查询课程信息
+GET {{content_host}}/content/course/40
+
+### 根据课程id查询课程信息
+GET {{content_host}}/content/course/40
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ6aGFuZ3NhbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE3MjE3MjY1NDYsImF1dGhvcml0aWVzIjpbInAxIl0sImp0aSI6IjIyYWJmZTY3LWEzMjctNGY5Mi1hZjM4LTI4M2I4ZjkyODUyYyIsImNsaWVudF9pZCI6IlhjV2ViQXBwIn0.imScoYTZ-O262Vayl3GpTG9g00pxOlKB8MMUIkx8keU
+
+### 修改课程
+PUT {{content_host}}/content/course
+Content-Type: application/json
+
+{
+  "id": 40,
+  "name": "SpringBoot核心",
+  "users": "Spring Boot初学者",
+  "tags": "Spring项目的快速构建",
+  "mt": "1-3",
+  "st": "1-3-2",
+  "grade": "200003",
+  "teachmode": "201001",
+  "description": "课程系统性地深度探讨 Spring Boot 核心特性，引导小伙伴对 Java 规范的重视，启发对技术原理性的思考，掌握排查问题的技能，以及学习阅读源码的方法和技巧，全面提升研发能力，进军架构师队伍。",
+  "pic": "https://cdn.educba.com/academy/wp-content/uploads/2018/08/Spring-BOOT-Interview-questions.jpg",
+  "charge": "201001",
+  "price": 0.01
+}
+
+### 查询某个课程的课程计划
+
+GET {{gateway_host}}/content/teachplan/117/tree-nodes
+
+### 根据课程id查询课程信息-网关
+GET {{gateway_host}}/content/course/40
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJiaXJ0aGRheVwiOlwiMjAyMi0wOS0yOFQxOToyODo0NlwiLFwiY3JlYXRlVGltZVwiOlwiMjAyMi0wOS0yOFQwODozMjowM1wiLFwiaWRcIjpcIjUwXCIsXCJuYW1lXCI6XCLlrabnlJ8xXCIsXCJuaWNrbmFtZVwiOlwi5aSn5rC054mbXCIsXCJwYXNzd29yZFwiOlwiJDJhJDEwJDBwdDdXbGZUYm5QRFRjV3RwLy4yTXU1Q1RYdm9obk5RaFI2MjhxcTRSb0tTYzBkR0FkRWdtXCIsXCJzZXhcIjpcIjFcIixcInN0YXR1c1wiOlwiMVwiLFwidXNlcm5hbWVcIjpcInN0dTFcIixcInVzZXJwaWNcIjpcImh0dHA6Ly9maWxlLjUxeHVlY2hlbmcuY24vZGRkZlwiLFwidXR5cGVcIjpcIjEwMTAwMVwifSIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE3MjE3OTEwODAsImF1dGhvcml0aWVzIjpbInRlc3QiXSwianRpIjoiNjE4YTI2MDAtMzQ3Yi00OTIxLTgxY2MtOWViYmZkZWExOTJmIiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.JhvRpmWp0ryIl01YzjkIiqGbR96NLSnKkvT3R1Lttkc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

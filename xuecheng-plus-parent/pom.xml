@@ -2,12 +2,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.xuecheng</groupId>
     <artifactId>xuecheng-plus-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>xuecheng-plus-parent</name>
     <description>xuecheng-plus-parent</description>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>../xuecheng-plus-base</module>
+        <module>../xuecheng-plus-checkcode</module>
+        <module>../xuecheng-plus-gateway</module>
+        <module>../xuecheng-plus-auth</module>
+        <module>../xuecheng-plus-content</module>
+        <module>../xuecheng-plus-learning</module>
+        <module>../xuecheng-plus-media</module>
+        <module>../xuecheng-plus-orders</module>
+        <module>../xuecheng-plus-message-sdk</module>
+        <module>../xuecheng-plus-search</module>
+        <module>../xuecheng-plus-system</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>
@@ -33,10 +48,8 @@
         <elasticsearch.version>7.12.1</elasticsearch.version>
     </properties>
 
-
     <dependencyManagement>
         <dependencies>
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -99,7 +112,6 @@
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid-spring-boot-starter.version}</version>
             </dependency>
-
             <!-- mySQL数据库驱动包管理 -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -112,14 +124,12 @@
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus-boot-starter.version}</version>
             </dependency>
-
             <!-- mybatis plus 代码生成器 -->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-generator</artifactId>
                 <version>${mybatis-plus-boot-starter.version}</version>
             </dependency>
-
             <!-- 工具类管理 -->
             <dependency>
                 <groupId>commons-lang</groupId>
@@ -177,14 +187,12 @@
                 <artifactId>elasticsearch-rest-high-level-client</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.elasticsearch</groupId>
                 <artifactId>elasticsearch</artifactId>
                 <version>${elasticsearch.version}</version>
             </dependency>
         </dependencies>
-
     </dependencyManagement>
 
     <build>
@@ -225,7 +233,6 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-
             <!--责处理项目资源文件并拷贝到输出目录，如果有额外的资源文件目录则需要配置-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

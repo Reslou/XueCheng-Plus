@@ -1,0 +1,21 @@
+#微服务配置
+spring:
+  application:
+    name: content-service
+  cloud:
+    nacos:
+      server-addr: 192.168.101.65:8848
+      config:
+        namespace: 9799a72a-3a17-41be-b09f-1dd87c3899aa
+        group: xuecheng-plus-project
+        file-extension: yaml
+        refresh-enabled: true
+        shared-configs:
+          - data-id: swagger-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: feign-${spring.profiles.active}.yaml
+            group: xuecheng-plus-common
+            refresh: true
+  profiles:
+    active: dev
